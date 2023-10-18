@@ -1,0 +1,61 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{%endblock%}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- <link rel="stylesheet"
+      href=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css "> -->
+    <link rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+
+    <link rel="stylesheet" href="{% static '/css/style.css'%}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  </head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">HOSPITAL</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active colo bi bi-house" aria-current="page" href="{%url 'home'%}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{%url 'about'%}">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link bi bi-person" href="{%url 'doctors'%}">Doctors</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{%url 'booking'%}">Booking</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{%url 'departments'%}">Departments</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link bi bi-person-rolodex" href="{%url 'contact'%}">Contacts</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      {%block content%}{%endblock%}
+      <div class="container-fluid bg-primary">
+        <!-- <h1 class="text-center"></h1> -->
+        <div class="row">
+           
+            
+            <h4 style="color: rgb(89, 59, 59);">Phone : 0484-263465</h4>
+            <h4 style="color: rgb(89, 59, 59);">Email : hospital@gmail.com</h4>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
